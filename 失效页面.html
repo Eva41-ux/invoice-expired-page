@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>发票开具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        }
+
+        body {
+            background-color: #f0f7ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .page-header {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000;
+            margin: 30px 0;
+        }
+
+        .error-icon {
+            width: 120px;
+            height: 120px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+            animation: shake 0.5s infinite alternate;
+        }
+
+        .error-icon span {
+            font-size: 60px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .error-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 30px;
+            animation: flicker 1s infinite;
+        }
+
+        .error-desc {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            max-width: 80%;
+            margin-bottom: 50px;
+        }
+
+        .close-btn {
+            width: 90%;
+            max-width: 400px;
+            padding: 15px 0;
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* 图标抖动故障效果 */
+        @keyframes shake {
+            from { transform: rotate(-5deg); }
+            to { transform: rotate(5deg); }
+        }
+
+        /* 文字闪烁故障效果 */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">发票开具</div>
+
+    <div class="error-icon">
+        <span>!</span>
+    </div>
+
+    <div class="error-title">二维码已失效!</div>
+
+    <div class="error-desc">
+        该二维码已失效或已提交开票，详细请联系商家
+    </div>
+
+    <button class="close-btn">关闭</button>
+</body>
+</html>
